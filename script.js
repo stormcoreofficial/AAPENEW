@@ -386,9 +386,11 @@ class CarouselHandler {
 // News Carousel Handler
 class NewsCarouselHandler {
     constructor() {
-        this.carousel = document.getElementById('noticiasCarousel');
+        this.carousel = document.querySelector('.noticias-carousel');
         this.prevBtn = document.getElementById('noticiasCarouselPrev');
         this.nextBtn = document.getElementById('noticiasCarouselNext');
+        this.cardWidth = 350; // Largura do card + gap
+        this.gap = 32; // Gap entre cards (2rem = 32px)
         this.init();
     }
 
@@ -396,23 +398,44 @@ class NewsCarouselHandler {
         if (this.prevBtn && this.nextBtn && this.carousel) {
             this.prevBtn.addEventListener('click', () => this.scrollPrev());
             this.nextBtn.addEventListener('click', () => this.scrollNext());
+            
+            // Update button states on scroll
+            this.carousel.addEventListener('scroll', () => this.updateButtonStates());
+            
+            // Initial button state
+            this.updateButtonStates();
         }
     }
 
     scrollPrev() {
-        const cardWidth = this.carousel.querySelector('.noticia-card').offsetWidth + 32; // 32px = gap
+        const scrollAmount = this.cardWidth + this.gap;
         this.carousel.scrollBy({
-            left: -cardWidth,
+            left: -scrollAmount,
             behavior: 'smooth'
         });
     }
 
     scrollNext() {
-        const cardWidth = this.carousel.querySelector('.noticia-card').offsetWidth + 32; // 32px = gap
+        const scrollAmount = this.cardWidth + this.gap;
         this.carousel.scrollBy({
-            left: cardWidth,
+            left: scrollAmount,
             behavior: 'smooth'
         });
+    }
+
+    updateButtonStates() {
+        if (!this.carousel) return;
+
+        const scrollLeft = this.carousel.scrollLeft;
+        const maxScroll = this.carousel.scrollWidth - this.carousel.clientWidth;
+
+        // Disable/enable buttons based on scroll position
+        this.prevBtn.disabled = scrollLeft <= 0;
+        this.nextBtn.disabled = scrollLeft >= maxScroll - 1; // -1 for rounding errors
+
+        // Update button opacity
+        this.prevBtn.style.opacity = scrollLeft <= 0 ? '0.5' : '1';
+        this.nextBtn.style.opacity = scrollLeft >= maxScroll - 1 ? '0.5' : '1';
     }
 }
 
