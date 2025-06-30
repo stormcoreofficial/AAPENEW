@@ -414,7 +414,7 @@ body.dark-mode {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 0 4rem;
+    padding: 12rem 0 4rem;
     background: linear-gradient(135deg, var(--purple-50), white, var(--purple-50));
     position: relative;
     overflow: hidden;
