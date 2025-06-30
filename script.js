@@ -383,87 +383,6 @@ class CarouselHandler {
     }
 }
 
-// News Carousel Handler
-class NewsCarouselHandler {
-    constructor() {
-        this.carousel = document.querySelector('.noticias-carousel');
-        this.prevBtn = document.getElementById('noticiasCarouselPrev');
-        this.nextBtn = document.getElementById('noticiasCarouselNext');
-        this.init();
-    }
-
-    init() {
-        if (this.prevBtn && this.nextBtn && this.carousel) {
-            console.log('News carousel elements found, initializing...');
-            
-            this.prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.scrollPrev();
-            });
-            
-            this.nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.scrollNext();
-            });
-            
-            // Update button states on scroll
-            this.carousel.addEventListener('scroll', () => this.updateButtonStates());
-            
-            // Initial button state
-            setTimeout(() => this.updateButtonStates(), 100);
-        } else {
-            console.log('News carousel elements not found:', {
-                carousel: !!this.carousel,
-                prevBtn: !!this.prevBtn,
-                nextBtn: !!this.nextBtn
-            });
-        }
-    }
-
-    scrollPrev() {
-        console.log('Scrolling previous');
-        const cardWidth = 350; // Largura do card
-        const gap = 32; // Gap entre cards (2rem = 32px)
-        const scrollAmount = cardWidth + gap;
-        
-        this.carousel.scrollBy({
-            left: -scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-
-    scrollNext() {
-        console.log('Scrolling next');
-        const cardWidth = 350; // Largura do card
-        const gap = 32; // Gap entre cards (2rem = 32px)
-        const scrollAmount = cardWidth + gap;
-        
-        this.carousel.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-
-    updateButtonStates() {
-        if (!this.carousel || !this.prevBtn || !this.nextBtn) return;
-
-        const scrollLeft = this.carousel.scrollLeft;
-        const maxScroll = this.carousel.scrollWidth - this.carousel.clientWidth;
-
-        // Disable/enable buttons based on scroll position
-        this.prevBtn.disabled = scrollLeft <= 0;
-        this.nextBtn.disabled = scrollLeft >= maxScroll - 1; // -1 for rounding errors
-
-        // Update button opacity
-        this.prevBtn.style.opacity = scrollLeft <= 0 ? '0.5' : '1';
-        this.nextBtn.style.opacity = scrollLeft >= maxScroll - 1 ? '0.5' : '1';
-        
-        // Update cursor
-        this.prevBtn.style.cursor = scrollLeft <= 0 ? 'not-allowed' : 'pointer';
-        this.nextBtn.style.cursor = scrollLeft >= maxScroll - 1 ? 'not-allowed' : 'pointer';
-    }
-}
-
 // Theme Handler
 class ThemeHandler {
     constructor() {
@@ -864,5 +783,4 @@ document.addEventListener('DOMContentLoaded', () => {
   new AccessibilityControlsHandler();
   new NewsModalHandler();
   new EventsModalHandler();
-  new NewsCarouselHandler();
 });
