@@ -1053,11 +1053,24 @@ section {
     background: white;
 }
 
-.noticias-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+/* Carousel de Notícias */
+.noticias-carousel-container {
+    position: relative;
     margin-bottom: 3rem;
+}
+
+.noticias-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.noticias-carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .noticia-card {
@@ -1068,6 +1081,10 @@ section {
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
+    flex: 0 0 350px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
 }
 
 .noticia-card:hover {
@@ -1078,11 +1095,12 @@ section {
 .noticia-image {
     position: relative;
     overflow: hidden;
+    height: 200px;
 }
 
 .noticia-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -1105,6 +1123,9 @@ section {
 
 .noticia-content {
     padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .noticia-date {
@@ -1133,6 +1154,25 @@ section {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     margin-bottom: 1rem;
+    flex: 1;
+}
+
+.noticias-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.noticias-controls .carousel-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.noticias-controls .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .newsletter {
@@ -2278,6 +2318,15 @@ body.dark-mode .modal-meta span:first-child {
     .evento-modal-card {
         flex-direction: row;
     }
+    
+    .noticias-carousel {
+        overflow-x: visible;
+        flex-wrap: nowrap;
+    }
+    
+    .noticia-card {
+        flex: 0 0 350px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -2339,6 +2388,16 @@ body.dark-mode .modal-meta span:first-child {
         align-self: flex-start;
         min-width: auto;
         width: fit-content;
+    }
+    
+    .noticias-carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .noticia-card {
+        scroll-snap-align: start;
+        flex: 0 0 300px;
     }
 }
 

@@ -62,6 +62,100 @@ const noticiasData = {
             
             <p>Para participar dos grupos, basta entrar em contato com a AAPE pelo telefone (31) 98472-9803 ou pelo e-mail contato@aape-ipatinga.org.br. A participação é gratuita e não há necessidade de agendamento prévio.</p>
         `
+    },
+    4: {
+        titulo: "Novos avanços no tratamento da epilepsia são apresentados em congresso",
+        data: "25 de Outubro, 2024",
+        categoria: "Pesquisa",
+        imagem: "https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=800",
+        conteudo: `
+            <p>O 15º Congresso Brasileiro de Epilepsia apresentou importantes avanços no tratamento da condição, incluindo novas terapias medicamentosas, técnicas cirúrgicas minimamente invasivas e dispositivos de neuroestimulação. Representantes da AAPE participaram do evento para se manterem atualizados sobre as últimas descobertas científicas.</p>
+            
+            <p>Entre os principais destaques do congresso estavam:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>Novos medicamentos antiepilépticos com menos efeitos colaterais</li>
+                <li>Técnicas de cirurgia a laser para epilepsia focal</li>
+                <li>Dispositivos de estimulação cerebral profunda</li>
+                <li>Terapias genéticas experimentais para epilepsias raras</li>
+            </ul>
+            
+            <p>Dr. Roberto Silva, neurologista e parceiro da AAPE, destacou: "Estamos vivendo uma era de grandes avanços no tratamento da epilepsia. Muitas pessoas que antes não tinham opções terapêuticas agora podem ter esperança de uma vida livre de crises."</p>
+            
+            <p>A AAPE está organizando uma palestra gratuita para compartilhar essas informações com a comunidade. O evento será realizado em dezembro de 2024, na sede da associação.</p>
+        `
+    },
+    5: {
+        titulo: "AAPE lança programa de capacitação para novos voluntários",
+        data: "18 de Outubro, 2024",
+        categoria: "Voluntariado",
+        imagem: "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800",
+        conteudo: `
+            <p>A AAPE lançou um programa abrangente de capacitação para voluntários, visando formar uma rede ainda maior de apoio à comunidade de pessoas com epilepsia. O programa inclui módulos sobre conhecimentos básicos sobre epilepsia, primeiros socorros, comunicação empática e atividades de apoio.</p>
+            
+            <p>O curso tem duração de 40 horas, distribuídas em 8 semanas, e aborda os seguintes temas:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>Fundamentos médicos da epilepsia</li>
+                <li>Aspectos psicossociais da condição</li>
+                <li>Técnicas de primeiros socorros durante crises</li>
+                <li>Comunicação e escuta ativa</li>
+                <li>Organização de eventos e atividades</li>
+                <li>Direitos das pessoas com epilepsia</li>
+            </ul>
+            
+            <p>Maria Santos, coordenadora de voluntários da AAPE, explica: "Nosso objetivo é formar voluntários bem preparados, que possam oferecer apoio qualificado e seguro. Cada pessoa que se junta à nossa equipe multiplica nossa capacidade de ajudar."</p>
+            
+            <p>As inscrições para a próxima turma estão abertas até 30 de novembro. Os interessados podem se inscrever através do site da AAPE ou presencialmente na sede da associação.</p>
+        `
+    },
+    6: {
+        titulo: "Aplicativo móvel ajuda no monitoramento de crises epilépticas",
+        data: "10 de Outubro, 2024",
+        categoria: "Tecnologia",
+        imagem: "https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=800",
+        conteudo: `
+            <p>Um novo aplicativo móvel desenvolvido em parceria com universidades brasileiras está revolucionando o monitoramento de crises epilépticas. O app permite que pacientes e familiares registrem episódios, sintomas, medicações e fatores desencadeantes, criando um diário digital completo.</p>
+            
+            <p>As principais funcionalidades do aplicativo incluem:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>Registro rápido de crises com data, hora e características</li>
+                <li>Lembretes para medicação</li>
+                <li>Gráficos e relatórios para consultas médicas</li>
+                <li>Identificação de padrões e fatores desencadeantes</li>
+                <li>Contatos de emergência integrados</li>
+                <li>Informações educativas sobre epilepsia</li>
+            </ul>
+            
+            <p>Dr. Carlos Mendes, neurologista e consultor do projeto, comenta: "Este tipo de ferramenta é fundamental para melhorar o controle da epilepsia. Com dados precisos, podemos ajustar tratamentos de forma mais eficaz."</p>
+            
+            <p>A AAPE está promovendo workshops para ensinar o uso do aplicativo. O app está disponível gratuitamente nas lojas de aplicativos para Android e iOS.</p>
+        `
+    },
+    7: {
+        titulo: "Dia Mundial da Epilepsia é celebrado com atividades especiais",
+        data: "28 de Setembro, 2024",
+        categoria: "Evento",
+        imagem: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600",
+        conteudo: `
+            <p>O Dia Mundial da Epilepsia foi celebrado com uma série de atividades especiais organizadas pela AAPE em parceria com a Prefeitura de Ipatinga. O evento principal aconteceu na Praça dos Pioneiros, com palestras, stands informativos, apresentações culturais e atividades para toda a família.</p>
+            
+            <p>A programação incluiu:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>Palestras sobre epilepsia e qualidade de vida</li>
+                <li>Demonstrações de primeiros socorros</li>
+                <li>Apresentações musicais e teatrais</li>
+                <li>Distribuição de material educativo</li>
+                <li>Consultas gratuitas com neurologistas</li>
+                <li>Atividades recreativas para crianças</li>
+            </ul>
+            
+            <p>O evento contou com a participação de mais de 500 pessoas e foi transmitido ao vivo pelas redes sociais da AAPE, alcançando milhares de visualizações. O prefeito de Ipatinga, João Silva, esteve presente e reafirmou o compromisso da cidade com a inclusão e o apoio às pessoas com epilepsia.</p>
+            
+            <p>Ana Paula, pessoa com epilepsia e voluntária da AAPE, emocionou o público ao compartilhar sua história: "Eventos como este mostram que não estamos sozinhos. A epilepsia faz parte da minha vida, mas não me define."</p>
+        `
     }
 };
 
@@ -286,6 +380,39 @@ class CarouselHandler {
 
     playAnimation() {
         this.carousel.style.animationPlayState = 'running';
+    }
+}
+
+// News Carousel Handler
+class NewsCarouselHandler {
+    constructor() {
+        this.carousel = document.getElementById('noticiasCarousel');
+        this.prevBtn = document.getElementById('noticiasCarouselPrev');
+        this.nextBtn = document.getElementById('noticiasCarouselNext');
+        this.init();
+    }
+
+    init() {
+        if (this.prevBtn && this.nextBtn && this.carousel) {
+            this.prevBtn.addEventListener('click', () => this.scrollPrev());
+            this.nextBtn.addEventListener('click', () => this.scrollNext());
+        }
+    }
+
+    scrollPrev() {
+        const cardWidth = this.carousel.querySelector('.noticia-card').offsetWidth + 32; // 32px = gap
+        this.carousel.scrollBy({
+            left: -cardWidth,
+            behavior: 'smooth'
+        });
+    }
+
+    scrollNext() {
+        const cardWidth = this.carousel.querySelector('.noticia-card').offsetWidth + 32; // 32px = gap
+        this.carousel.scrollBy({
+            left: cardWidth,
+            behavior: 'smooth'
+        });
     }
 }
 
@@ -611,9 +738,6 @@ class EventsModalHandler {
 }
 
 // Initialize all handlers when DOM is loaded
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.newsletter-form');
 
@@ -680,7 +804,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     new ScrollAnimationObserver();
@@ -693,4 +816,5 @@ document.addEventListener('DOMContentLoaded', () => {
   new AccessibilityControlsHandler();
   new NewsModalHandler();
   new EventsModalHandler();
+  new NewsCarouselHandler();
 });
