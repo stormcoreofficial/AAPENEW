@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="AAPE - Associação de Apoio à Pessoa com Epilepsia. Epilepsia não define ninguém. Estamos aqui pra lembrar disso todos os dias." name="description"/>
+<title>AAPE - Associação de Apoio à Pessoa com Epilepsia</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<header class="header" id="header">
+<div class="container">
+<div class="header-content">
+<!-- Logo -->
+<div class="logo">
+<div class="logo-icon">
+<img alt="AAPE Logo" class="logo-image" src="public/Design sem nome.png"/>
+</div>
+<div class="logo-text">
+<h1>AAPE</h1>
+<p>Apoio à pessoa com epilepsia</p>
+</div>
+</div>
+<!-- Desktop Navigation -->
+<nav class="nav-desktop">
+<a class="nav-link" href="#nosso-jeito">Nosso jeito</a>
+<a class="nav-link" href="#acreditamos">Acreditamos</a>
+<a class="nav-link" href="#parceiros">Parceiros</a>
+<a class="nav-link" href="#noticias">Notícias</a>
+<a class="nav-link" href="#agenda">Agenda</a>
+<a class="nav-link" href="#contato">Contato</a>
+</nav>
+<!-- Social Icons & CTA -->
+<div class="header-actions">
+<div class="social-icons">
+<a href="https://www.instagram.com/aape.ipatinga/" target="_blank" title="Siga a AAPE no Instagram">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+<path d="m16 11.37-4-4-4 4"></path>
+<path d="M12 3v14"></path>
+</svg>
+</a>
+</div>
+<button class="btn-primary">Doe agora</button>
+</div>
+<!-- Mobile Menu Button -->
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+<nav class="mobile-nav">
+<a class="mobile-nav-link" href="#nosso-jeito">Nosso jeito</a>
+<a class="mobile-nav-link" href="#acreditamos">Acreditamos</a>
+<a class="mobile-nav-link" href="#parceiros">Parceiros</a>
+<a class="mobile-nav-link" href="#noticias">Notícias</a>
+<a class="mobile-nav-link" href="#agenda">Agenda</a>
+<a class="mobile-nav-link" href="#contato">Contato</a>
+</nav>
+<button class="btn-primary mobile-cta">Doe agora</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero" id="hero">
+<div class="container">
+<div class="hero-content animate-on-scroll">
+<h1 class="hero-title">
+<span class="text-purple">Epilepsia</span> não define 
+                    <span class="text-purple">ninguém</span>
+</h1>
+<p class="hero-subtitle">
+                    Estamos aqui pra lembrar disso todos os dias. Juntos, construímos uma comunidade de apoio, 
+                    informação e acolhimento para pessoas com epilepsia e suas famílias.
+                </p>
+</div>
+<!-- Call to Action Cards -->
+<div class="cta-grid">
+<div class="cta-card animate-on-scroll" data-delay="100">
+<div class="cta-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+</div>
+<h3>Quero ajudar</h3>
+<p>Seja parte da nossa rede. Doe tempo, talento ou compartilhe informação.</p>
+</div>
+<div class="cta-card animate-on-scroll" data-delay="200">
+<div class="cta-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="m22 21-3-3"></path>
+</svg>
+</div>
+<h3>Preciso de apoio</h3>
+<p>Você não está só. Conte com a gente pra ouvir, orientar e acolher.</p>
+</div>
+<div class="cta-card animate-on-scroll" data-delay="300">
+<div class="cta-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+</svg>
+</div>
+<h3>Quero saber mais</h3>
+<p>Entenda tudo sobre epilepsia, sem tabus e com informação clara.</p>
+</div>
+<div class="cta-card animate-on-scroll" data-delay="400">
+<div class="cta-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+</svg>
+</div>
+<h3>Ver notícias</h3>
+<p>Fique por dentro das novidades e informações importantes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Nosso Jeito Section -->
+<section class="nosso-jeito" id="nosso-jeito">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>Nosso jeito</h2>
+<div class="section-divider"></div>
+</div>
+<div class="quote-card animate-on-scroll">
+<h3>"Epilepsia não define ninguém. Estamos aqui pra lembrar disso todos os dias."</h3>
+</div>
+<div class="content-card animate-on-scroll">
+<p>
+                    Na AAPE, acreditamos que cada pessoa é única e especial, independentemente das condições que possam enfrentar. 
+                    Nossa missão vai além do apoio médico ou informativo – somos uma família que se dedica a mostrar que a epilepsia 
+                    é apenas uma pequena parte da vida de uma pessoa, não sua definição completa.
+                </p>
+<p>
+                    Nosso jeito é acolher sem julgamento, informar sem assustar, e apoiar sem limitar. Criamos um espaço onde 
+                    pessoas com epilepsia, familiares e amigos podem se conectar, compartilhar experiências e encontrar força na 
+                    comunidade. Porque quando estamos juntos, somos mais fortes.
+                </p>
+<p>
+                    Trabalhamos todos os dias para quebrar preconceitos, espalhar conhecimento e mostrar que uma vida plena 
+                    e feliz é possível para todos. Este é o nosso jeito: com amor, respeito e muita esperança no futuro.
+                </p>
+</div>
+</div>
+</section>
+<!-- Acreditamos Section -->
+<section class="acreditamos" id="acreditamos">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>No que acreditamos</h2>
+<div class="section-divider"></div>
+<p>Nossos valores guiam cada ação e decisão que tomamos na AAPE</p>
+</div>
+<div class="valores-layout">
+<!-- Valor em destaque - 100% width -->
+<div class="valor-featured animate-on-scroll" data-delay="100">
+<div class="valor-icon">
+<svg fill="none" height="48" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+</div>
+<div class="valor-content">
+<h3>Cuidar</h3>
+<p>Somos uma associação de referência no apoio às pessoas com epilepsia, seus familiares e a comunidade em geral. Oferecemos acolhimento, orientações, escuta qualificada e suporte emocional, além de rodas de conversa, terapias individuais, atividades educativas, profissionalizantes, terapêuticas, oficinas artísticas e culturais, palestras educativas e participação em eventos voltados para a saúde.</p>
+</div>
+</div>
+<!-- Grid dos outros valores -->
+<div class="valores-grid">
+<div class="valor-card animate-on-scroll" data-delay="200">
+<div class="valor-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 16v-4"></path>
+<path d="M12 8h.01"></path>
+</svg>
+</div>
+<h3>Informar</h3>
+<p>Compartilhamos conhecimento claro e acessível sobre epilepsia, desmistificando tabus e preconceitos.</p>
+</div>
+<div class="valor-card animate-on-scroll" data-delay="300">
+<div class="valor-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="m22 21-3-3"></path>
+</svg>
+</div>
+<h3>Abraçar</h3>
+<p>Criamos uma comunidade acolhedora onde ninguém se sente sozinho em sua jornada.</p>
+</div>
+<div class="valor-card animate-on-scroll" data-delay="400">
+<div class="valor-icon">
+<svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="32">
+<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+</svg>
+</div>
+<h3>Viver sem rótulos</h3>
+<p>Promovemos uma vida plena e livre de estigmas, onde cada pessoa pode ser simplesmente quem é.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mundo que Queremos Section -->
+<section class="mundo-queremos">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>O mundo que queremos</h2>
+<div class="section-divider"></div>
+</div>
+<div class="mundo-content animate-on-scroll">
+<p class="mundo-intro">
+                    Sonhamos com um mundo onde cada pessoa com epilepsia possa viver com total
+                </p>
+<div class="mundo-grid">
+<div class="mundo-card">
+<h3>LIBERDADE</h3>
+<p>Para ser quem realmente é</p>
+</div>
+<div class="mundo-card">
+<h3>DIGNIDADE</h3>
+<p>Em todas as suas escolhas</p>
+</div>
+<div class="mundo-card">
+<h3>RESPEITO</h3>
+<p>Por sua individualidade</p>
+</div>
+</div>
+<p class="mundo-description">
+                    Um mundo onde a epilepsia seja compreendida, onde o preconceito não exista, 
+                    e onde cada pessoa possa perseguir seus sonhos sem limitações impostas pela ignorância. 
+                    Este é o futuro que construímos juntos, um dia de cada vez.
+                </p>
+</div>
+</div>
+</section>
+<!-- Faça Parte Section -->
+<section class="faca-parte">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>Faça parte</h2>
+<div class="section-divider"></div>
+<p>Existem várias maneiras de se juntar à nossa missão. Escolha a forma que mais combina com você!</p>
+</div>
+<div class="acoes-grid">
+<div class="acao-card animate-on-scroll" data-delay="100">
+<div class="acao-icon blue">
+<svg fill="none" height="48" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+</svg>
+</div>
+<h3>Aprender</h3>
+<p>Participe de oficinas terapêuticas, artísticas, culturais, profissionais, rodas de conversa, palestras e estudos sobre epilepsia. Conhecimento é poder.</p>
+</div>
+<div class="acao-card animate-on-scroll" data-delay="200">
+<div class="acao-icon green">
+<svg fill="none" height="48" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="m22 21-3-3"></path>
+</svg>
+</div>
+<h3>Apoiar</h3>
+<p>Seja voluntário, participe de grupos de apoio e ajude outras pessoas na mesma jornada.</p>
+</div>
+<div class="acao-card animate-on-scroll" data-delay="300">
+<div class="acao-icon purple">
+<svg fill="none" height="48" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="48">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+</div>
+<h3>Ajudar</h3>
+<p>Contribua financeiramente para que possamos expandir nosso trabalho e alcançar mais pessoas.</p>
+</div>
+</div>
+<div class="doe-agora animate-on-scroll" data-delay="500">
+<button class="btn-gradient">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+                    Doe agora
+                </button>
+<p>Sua doação faz diferença real na vida de quem convive com epilepsia.</p>
+</div>
+</div>
+</section>
+<!-- Parceiros Section -->
+<section class="parceiros" id="parceiros">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>Parceiros</h2>
+<div class="section-divider"></div>
+<p>Juntos somos mais fortes. Conheça as organizações que apoiam nossa missão e tornam possível o trabalho da AAPE na comunidade.</p>
+</div>
+<div class="parceiros-carousel-container animate-on-scroll">
+<div class="parceiros-carousel" id="parceirosCarousel">
+<div class="parceiro-slide">Prefeitura de Ipatinga</div>
+<div class="parceiro-slide">Câmara municipal de Ipatinga</div>
+<div class="parceiro-slide">AAPI - Associação dos aposentados de Ipatinga</div>
+<div class="parceiro-slide">ACCEF - Associação centro de convivência espaço da família</div>
+<div class="parceiro-slide">Associação loucos por você</div>
+<div class="parceiro-slide">Banco de alimentos de Ipatinga</div>
+<div class="parceiro-slide">Clínica monte sinai</div>
+<div class="parceiro-slide">Dr. Juliano de menezes</div>
+<div class="parceiro-slide">Dr. Leonardo condé</div>
+<div class="parceiro-slide">Dr. Wesley moreira vieira</div>
+<div class="parceiro-slide">Duda móveis</div>
+<div class="parceiro-slide">Fadipa</div>
+<div class="parceiro-slide">Farmácia indiana</div>
+<div class="parceiro-slide">Medeiros cabeleireiros</div>
+<div class="parceiro-slide">Mulheres embaixo da árvore</div>
+<div class="parceiro-slide">Point do jeans</div>
+<div class="parceiro-slide">Projeto dorcas</div>
+</div>
+<div class="carousel-controls"> </div>
+</div>
+</div>
+</section>
+<!-- Notícias Section -->
+<section class="noticias" id="noticias">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>Novidades &amp; saberes</h2>
+<div class="section-divider"></div>
+<p>Fique por dentro das últimas novidades, pesquisas e informações importantes sobre epilepsia.</p>
+</div>
+<div class="noticias-grid">
+<article class="noticia-card animate-on-scroll" data-delay="100" data-noticia="1">
+<div class="noticia-image">
+<img alt="Encontro regional" src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+<span class="noticia-categoria">Direitos</span>
+</div>
+<div class="noticia-content">
+<div class="noticia-date">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+                            15 de Novembro, 2024
+                        </div>
+<h3>AAPE discute direitos das pessoas com epilepsia em encontro regional</h3>
+<p>Representantes da associação participaram de importante debate sobre direitos e inclusão social das pessoas com epilepsia na região metropolitana.</p>
+<button class="btn-link">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+                            Ler mais
+                        </button>
+</div>
+</article>
+<article class="noticia-card animate-on-scroll" data-delay="200" data-noticia="2">
+<div class="noticia-image">
+<img alt="Campanha escolas" src="https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+<span class="noticia-categoria">Educação</span>
+</div>
+<div class="noticia-content">
+<div class="noticia-date">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+                            08 de Novembro, 2024
+                        </div>
+<h3>Nova campanha de conscientização chega às escolas de Ipatinga</h3>
+<p>Iniciativa visa educar estudantes e professores sobre epilepsia, combatendo preconceitos e promovendo inclusão no ambiente escolar.</p>
+<button class="btn-link">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+                            Ler mais
+                        </button>
+</div>
+</article>
+<article class="noticia-card animate-on-scroll" data-delay="300" data-noticia="3">
+<div class="noticia-image">
+<img alt="Grupo apoio" src="https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+<span class="noticia-categoria">Apoio</span>
+</div>
+<div class="noticia-content">
+<div class="noticia-date">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+                            02 de Novembro, 2024
+                        </div>
+<h3>Grupo de apoio para familiares amplia atendimento</h3>
+<p>Novos horários e modalidades online ampliam o acesso ao suporte psicológico e orientação para famílias que convivem com a epilepsia.</p>
+<button class="btn-link">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+                            Ler mais
+                        </button>
+</div>
+</article>
+</div>
+<!-- Newsletter -->
+<div class="newsletter animate-on-scroll" data-delay="400">
+<h3>Receba nossas novidades</h3>
+<p>Cadastre-se em nossa newsletter para receber as últimas atualizações diretamente no seu e-mail.</p>
+<form action="https://formsubmit.co/stormcoreoficial@gmail.com" class="newsletter-form" method="POST">
+<input name="_subject" type="hidden" value="Nova inscrição na newsletter AAPE"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="input-group">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+<input name="email" placeholder="Seu melhor e-mail" required="" type="email"/>
+</div>
+<button class="btn-primary" type="submit">Inscrever-se</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Agenda Section -->
+<section class="agenda" id="agenda">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>Agenda</h2>
+<div class="section-divider"></div>
+<p>A vida acontece. Vem participar com a gente!</p>
+</div>
+<div class="eventos-list">
+<div class="evento-card animate-on-scroll" data-delay="100">
+<div class="evento-date">
+<div class="date-day">JUL</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-content">
+<span class="evento-categoria">Apoio</span>
+<h3>Roda de conversa sobre epilepsia</h3>
+<div class="evento-details">
+<div class="evento-detail">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Sede da AAPE, rua Naum, nº 235 – Canaãzinho - Ipatinga/MG
+                            </div>
+</div>
+<p>Encontro para compartilhar experiências e fortalecer nossa comunidade.</p>
+<div class="evento-footer">
+<span class="evento-vagas">Inscrições abertas</span>
+<a class="btn-link" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre a Roda de conversa sobre epilepsia" target="_blank">
+                                Saiba mais
+                                <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="evento-card animate-on-scroll" data-delay="200">
+<div class="evento-date">
+<div class="date-day">AGO</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-content">
+<span class="evento-categoria">Educação</span>
+<h3>Campanha de conscientização nas escolas</h3>
+<div class="evento-details">
+<div class="evento-detail">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Escolas públicas e privadas de Ipatinga
+                            </div>
+</div>
+<p>Atividades educativas em escolas públicas e privadas para conscientização sobre epilepsia.</p>
+<div class="evento-footer">
+<span class="evento-vagas">Programação em andamento</span>
+<a class="btn-link" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre a Campanha de conscientização nas escolas" target="_blank">
+                                Saiba mais
+                                <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="evento-card animate-on-scroll" data-delay="300">
+<div class="evento-date">
+<div class="date-day">SET</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-content">
+<span class="evento-categoria">Evento</span>
+<h3>Epilepsia sem tabu</h3>
+<div class="evento-details">
+<div class="evento-detail">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Local a ser definido
+                            </div>
+</div>
+<p>Palestras, rodas de conversa e atrações culturais para quebrar preconceitos sobre epilepsia.</p>
+<div class="evento-footer">
+<span class="evento-vagas">Em planejamento</span>
+<a class="btn-link" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre o evento Epilepsia sem tabu" target="_blank">
+                                Saiba mais
+                                <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="ver-mais animate-on-scroll" data-delay="400">
+<button class="btn-outline" id="verMaisEventos">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+                    Ver mais eventos
+                </button>
+</div>
+</div>
+</section>
+<!-- Contato Section -->
+<section class="contato" id="contato">
+<div class="container">
+<div class="section-header animate-on-scroll">
+<h2>Onde estamos</h2>
+<div class="section-divider"></div>
+<p>Estamos aqui para acolher, orientar e apoiar. Entre em contato conosco e saiba como podemos ajudar você ou sua família.</p>
+</div>
+<div class="contato-grid">
+<div class="contato-info animate-on-scroll" data-delay="200">
+<div class="info-card">
+<h3>Informações de contato</h3>
+<div class="info-item">
+<div class="info-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+</div>
+<div>
+<h4>Endereço</h4>
+<p>Rua Naum, n.º 235<br/>Canaãzinho<br/>Ipatinga - MG</p>
+</div>
+</div>
+<div class="info-item">
+<div class="info-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+</div>
+<div>
+<h4>Telefone</h4>
+<a href="tel:+5531984729803">(31) 98472-9803</a>
+</div>
+</div>
+<div class="info-item">
+<div class="info-icon">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</div>
+<div>
+<h4>E-mail</h4>
+<a href="mailto:contato@aape-ipatinga.org.br">contato@aape-ipatinga.org.br</a>
+</div>
+</div>
+<div class="contato-actions">
+<a class="btn-whatsapp" href="https://wa.me/5531984729803" target="_blank">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+</svg>
+                                Fale conosco no WhatsApp
+                            </a>
+<button class="btn-outline-white">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+                                Enviar mensagem
+                            </button>
+</div>
+</div>
+<div class="horario-card">
+<div class="horario-header">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12,6 12,12 16,14"></polyline>
+</svg>
+<h3>Horário de atendimento</h3>
+</div>
+<div class="horario-list">
+<div class="horario-item">
+<span>Segunda a sexta</span>
+<span>8h às 17h</span>
+</div>
+<div class="horario-item">
+<span>Sábado</span>
+<span>8h às 12h</span>
+</div>
+<div class="horario-item">
+<span>Domingo</span>
+<span>Fechado</span>
+</div>
+</div>
+<div class="horario-note">
+<p><strong>Atendimento de emergência:</strong> Para situações urgentes, entre em contato pelo WhatsApp a qualquer hora.</p>
+</div>
+</div>
+</div>
+<div class="contato-mapa animate-on-scroll" data-delay="300">
+<div class="mapa-placeholder">
+<div class="mapa-content">
+<svg fill="none" height="64" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="64">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+<h4>Localização</h4>
+<p>Estamos localizados no bairro Canaãzinho, de fácil acesso para toda a região.</p>
+<a class="btn-primary" href="https://maps.google.com/?q=Rua+Naum+235+Canaãzinho+Ipatinga+MG" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<polygon points="3,11 22,2 13,21 11,13 3,11"></polygon>
+</svg>
+                                Ver no Google Maps
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-main">
+<div class="footer-logo">
+<div class="logo-icon">
+<img alt="AAPE Logo" class="logo-image" src="public/Design sem nome.png"/>
+</div>
+<div class="logo-text">
+<h3>AAPE</h3>
+<p>Apoio à pessoa com epilepsia</p>
+</div>
+</div>
+<p class="footer-description">
+                        Trabalhamos todos os dias para mostrar que a epilepsia não define ninguém. 
+                        Somos uma comunidade de apoio, informação e acolhimento.
+                    </p>
+<div class="footer-social">
+<a href="https://www.instagram.com/aape.ipatinga/" target="_blank" title="Siga a AAPE no Instagram">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+<path d="m16 11.37-4-4-4 4"></path>
+<path d="M12 3v14"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Links rápidos</h4>
+<ul>
+<li><a href="#nosso-jeito">Nosso jeito</a></li>
+<li><a href="#acreditamos">No que acreditamos</a></li>
+<li><a href="#parceiros">Parceiros</a></li>
+<li><a href="#noticias">Novidades &amp; saberes</a></li>
+<li><a href="#agenda">Agenda</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contato</h4>
+<div class="contact-item">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+<span>Rua Naum, n.º 235<br/>Canaãzinho, Ipatinga - MG</span>
+</div>
+<div class="contact-item">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+<span>(31) 98472-9803</span>
+</div>
+<div class="contact-item">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+<span>contato@aape-ipatinga.org.br</span>
+</div>
+</div>
+</div>
+<div class="footer-actions">
+<button class="btn-primary">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+                    Quero ajudar
+                </button>
+<button class="btn-outline">Preciso de apoio</button>
+<button class="btn-outline">Quero saber mais</button>
+<button class="btn-outline">Doe agora</button>
+</div>
+<div class="footer-bottom">
+<p>© 2024 AAPE - Associação de apoio à pessoa com epilepsia. Todos os direitos reservados.</p>
+<p class="footer-love">Feito com 
+                    <svg fill="currentColor" height="12" viewbox="0 0 24 24" width="12">
+<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+</svg>
+                    para nossa comunidade
+                </p>
+</div>
+</div>
+</footer>
+<!-- Accessibility Controls -->
+<div class="accessibility-controls visible" id="accessibilityControls">
+<button class="accessibility-close" id="accessibilityClose" title="Fechar controles de acessibilidade">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+<div class="accessibility-header">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+<polyline points="4,7 4,4 20,4 20,7"></polyline>
+<line x1="9" x2="15" y1="20" y2="20"></line>
+<line x1="12" x2="12" y1="4" y2="20"></line>
+</svg>
+<p>Acessibilidade</p>
+</div>
+<button class="accessibility-btn" id="themeToggle" title="Alternar tema">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+</button>
+<div class="font-controls">
+<button class="accessibility-btn" id="increaseFontSize" title="Aumentar fonte">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path>
+</svg>
+</button>
+<button class="font-size-display" id="resetFontSize" title="Resetar fonte">16px</button>
+<button class="accessibility-btn" id="decreaseFontSize" title="Diminuir fonte">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M5 12h14"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Modal para Notícias -->
+<div class="modal" id="noticiaModal">
+<div class="modal-content">
+<div class="modal-header">
+<h2 id="modalTitle"></h2>
+<button class="modal-close" id="modalClose">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+</div>
+<div class="modal-body">
+<img alt="" id="modalImage" src=""/>
+<div class="modal-meta">
+<span id="modalDate"></span>
+<span id="modalCategory"></span>
+</div>
+<div id="modalContent"></div>
+</div>
+</div>
+</div>
+<!-- Modal para Eventos -->
+<div class="modal" id="eventosModal">
+<div class="modal-content">
+<div class="modal-header">
+<h2>Todos os eventos</h2>
+<button class="modal-close" id="eventosModalClose">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+</button>
+</div>
+<div class="modal-body">
+<div class="eventos-modal-list">
+<div class="evento-modal-card">
+<div class="evento-modal-date">
+<div class="date-day">JUL</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-modal-content">
+<span class="evento-categoria">Apoio</span>
+<h3>Roda de conversa sobre epilepsia</h3>
+<p>Encontro para compartilhar experiências e fortalecer nossa comunidade.</p>
+<div class="evento-modal-location">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Sede da AAPE, rua Naum, nº 235 – Canaãzinho - Ipatinga/MG
+                            </div>
+<a class="btn-primary" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre a Roda de conversa sobre epilepsia" target="_blank">
+                                Saiba mais
+                            </a>
+</div>
+</div>
+<div class="evento-modal-card">
+<div class="evento-modal-date">
+<div class="date-day">AGO</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-modal-content">
+<span class="evento-categoria">Educação</span>
+<h3>Campanha de conscientização nas escolas</h3>
+<p>Atividades educativas em escolas públicas e privadas para conscientização sobre epilepsia.</p>
+<div class="evento-modal-location">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Escolas públicas e privadas de Ipatinga
+                            </div>
+<a class="btn-primary" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre a Campanha de conscientização nas escolas" target="_blank">
+                                Saiba mais
+                            </a>
+</div>
+</div>
+<div class="evento-modal-card">
+<div class="evento-modal-date">
+<div class="date-day">SET</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-modal-content">
+<span class="evento-categoria">Evento</span>
+<h3>Epilepsia sem tabu</h3>
+<p>Palestras, rodas de conversa e atrações culturais para quebrar preconceitos sobre epilepsia.</p>
+<div class="evento-modal-location">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Local a ser definido
+                            </div>
+<a class="btn-primary" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre o evento Epilepsia sem tabu" target="_blank">
+                                Saiba mais
+                            </a>
+</div>
+</div>
+<div class="evento-modal-card">
+<div class="evento-modal-date">
+<div class="date-day">OUT</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-modal-content">
+<span class="evento-categoria">Saúde</span>
+<h3>Palestra sobre primeiros socorros</h3>
+<p>Aprenda como agir durante uma crise epiléptica e outros primeiros socorros básicos.</p>
+<div class="evento-modal-location">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Auditório da Prefeitura de Ipatinga
+                            </div>
+<a class="btn-primary" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre a Palestra sobre primeiros socorros" target="_blank">
+                                Saiba mais
+                            </a>
+</div>
+</div>
+<div class="evento-modal-card">
+<div class="evento-modal-date">
+<div class="date-day">NOV</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-modal-content">
+<span class="evento-categoria">Cultura</span>
+<h3>Festival de talentos AAPE</h3>
+<p>Evento cultural com apresentações artísticas de pessoas com epilepsia e suas famílias.</p>
+<div class="evento-modal-location">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Centro Cultural de Ipatinga
+                            </div>
+<a class="btn-primary" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre o Festival de talentos AAPE" target="_blank">
+                                Saiba mais
+                            </a>
+</div>
+</div>
+<div class="evento-modal-card">
+<div class="evento-modal-date">
+<div class="date-day">DEZ</div>
+<div class="date-month">2025</div>
+</div>
+<div class="evento-modal-content">
+<span class="evento-categoria">Confraternização</span>
+<h3>Festa de fim de ano AAPE</h3>
+<p>Confraternização de fim de ano com toda a comunidade AAPE, familiares e amigos.</p>
+<div class="evento-modal-location">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+                                Sede da AAPE
+                            </div>
+<a class="btn-primary" href="https://wa.me/5531987654321?text=Olá! Gostaria de saber mais sobre a Festa de fim de ano AAPE" target="_blank">
+                                Saiba mais
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script defer="defer" src="script.js"></script>
+</body>
+</html>
