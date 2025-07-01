@@ -709,15 +709,19 @@ class EventsModalHandler {
 }
 
 // News functionality using SheetDB
-document.addEventListener('DOMContentLoaded', function() {
-    // Fetch news from SheetDB API
-    fetchNews();
-    
-    // Set up modal functionality for dynamically loaded news
-    setupNewsModal();
+document.addEventListener('DOMContentLoaded', function () {
+  console.log("✅ DOM carregado, script.js executando...");
+
+  // Fetch news from Google Sheets API
+  fetchNews();
+
+  // Set up modal functionality for dynamically loaded news
+  setupNewsModal();
 });
 
+
 async function fetchNews() {
+  console.log("🚀 Iniciando fetchNews");
     const sheetdbUrl = 'https://script.google.com/macros/s/AKfycby8U7VqPva3ymAQBLGJCWo0cp6thk9znVs5H2PEtaDFcv-Hedcswfrq7LcejRAQv7SS/exec';
     const noticiasCarousel = document.getElementById('noticiasCarousel');
     const loadingElement = document.getElementById('newsLoading');
