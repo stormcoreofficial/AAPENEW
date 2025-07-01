@@ -576,8 +576,7 @@ class AccessibilityControlsHandler {
 
         // Show/hide the button based on controls visibility
         const updateShowButton = () => {
-    if (!this.controls) return;
-            if (this.controls && this.controls.classList.contains('hidden')) {
+            if (this.controls.classList.contains('hidden')) {
                 showBtn.style.display = 'flex';
             } else {
                 showBtn.style.display = 'none';
@@ -589,7 +588,9 @@ class AccessibilityControlsHandler {
 
         // Watch for changes
         const observer = new MutationObserver(updateShowButton);
-        observer.observe(this.controls, { attributes: true, attributeFilter: ['class'] });
+        if (this.controls instanceof Node) {
+  observer.observe(this.controls, { attributes: true, attributeFilter: ['class'] });
+}
     }
 }
 
@@ -735,12 +736,9 @@ async function fetchNews() {
         const data = await response.json();
         
         // Filter to only show published articles
-        const publishedArticles = data.filter(article =>
-  typeof article.Publicado === 'string' &&
-  article.Publicado.toLowerCase() === 'true'
-);
-
-
+        const publishedArticles = data.filter(article => 
+            article.publicado && article.publicado.toLowerCase() === 'sim'
+        );
         
         // Sort articles by date (newest first)
         publishedArticles.sort((a, b) => {
