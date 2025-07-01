@@ -734,9 +734,11 @@ async function fetchNews() {
         const data = await response.json();
         
         // Filter to only show published articles
-        const publishedArticles = data.filter(article => 
-            article.publicado && article.publicado.toLowerCase() === 'sim'
+        const publishedArticles = data.filter(article =>
+        article.publicado === true || 
+        (typeof article.publicado === 'string' && article.publicado.toLowerCase() === 'sim')
         );
+
         
         // Sort articles by date (newest first)
         publishedArticles.sort((a, b) => {
