@@ -715,7 +715,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function fetchNews() {
-    const sheetdbUrl = 'https://sheetdb.io/api/v1/8qmdgje3w2w9a';
+    const sheetdbUrl = 'https://script.google.com/macros/s/AKfycby8U7VqPva3ymAQBLGJCWo0cp6thk9znVs5H2PEtaDFcv-Hedcswfrq7LcejRAQv7SS/exec';
     const noticiasCarousel = document.getElementById('noticiasCarousel');
     const loadingElement = document.getElementById('newsLoading');
     const errorElement = document.getElementById('newsError');
