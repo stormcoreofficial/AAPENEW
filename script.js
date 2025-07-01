@@ -576,6 +576,7 @@ class AccessibilityControlsHandler {
 
         // Show/hide the button based on controls visibility
         const updateShowButton = () => {
+    if (!this.controls) return;
             if (this.controls && this.controls.classList.contains('hidden')) {
                 showBtn.style.display = 'flex';
             } else {
@@ -735,8 +736,8 @@ async function fetchNews() {
         
         // Filter to only show published articles
         const publishedArticles = data.filter(article =>
-  typeof article.publicado === 'string' &&
-  article.publicado.toLowerCase() === 'true'
+  typeof article.Publicado === 'string' &&
+  article.Publicado.toLowerCase() === 'true'
 );
 
 
