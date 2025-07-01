@@ -710,6 +710,7 @@ class EventsModalHandler {
 
 // News functionality using SheetDB
 document.addEventListener('DOMContentLoaded', function () {
+  console.log('✅ DOM carregado, script iniciado');
   console.log("✅ DOM carregado, script.js executando...");
 
   // Fetch news from Google Sheets API
@@ -721,6 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 async function fetchNews() {
+  console.log('🚀 Iniciando fetchNews');
   console.log("🚀 Iniciando fetchNews");
     const sheetdbUrl = 'https://script.google.com/macros/s/AKfycby8U7VqPva3ymAQBLGJCWo0cp6thk9znVs5H2PEtaDFcv-Hedcswfrq7LcejRAQv7SS/exec';
     const noticiasCarousel = document.getElementById('noticiasCarousel');
@@ -734,19 +736,24 @@ async function fetchNews() {
         
         // Fetch data from SheetDB
         const response = await fetch(sheetdbUrl);
+    console.log('📡 Resposta recebida:', response);
         
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         
         const data = await response.json();
+    console.log('📦 Dados recebidos:', data);
         
         // Filter to only show published articles
-        const publishedArticles = data.filter(article => 
+        const publishedArticles = data.filter(article =>
+        console.log('🔍 Verificando publicação:', article.Publicado || article.publicado || ''), 
             article.publicado && article.publicado.toLowerCase() === 'sim'
         );
         
-        // Sort articles by date (newest first)
+        console.log('📰 Total de notícias publicadas:', publishedArticles.length);
+
+    // Sort articles by date (newest first)
         publishedArticles.sort((a, b) => {
             const dateA = new Date(formatDateForSorting(a.data));
             const dateB = new Date(formatDateForSorting(b.data));
