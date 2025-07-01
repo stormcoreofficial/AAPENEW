@@ -576,12 +576,14 @@ class AccessibilityControlsHandler {
 
         // Show/hide the button based on controls visibility
         const updateShowButton = () => {
-            if (this.controls.classList.contains('hidden')) {
-                showBtn.style.display = 'flex';
-            } else {
-                showBtn.style.display = 'none';
-            }
-        };
+  if (!this.controls) return;
+
+  if (this.controls.classList.contains('hidden')) {
+    showBtn.style.display = 'flex';
+  } else {
+    showBtn.style.display = 'none';
+  }
+};
 
         // Initial update
         updateShowButton();
