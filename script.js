@@ -606,15 +606,6 @@ class NewsModalHandler {
     }
 
     init() {
-        // Add click listeners to news cards
-        document.querySelectorAll('.noticia-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                e.preventDefault();
-                const noticiaId = card.dataset.noticia;
-                this.openModal(noticiaId);
-            });
-        });
-
         // Close modal listeners
         if (this.modalClose) {
             this.modalClose.addEventListener('click', () => this.closeModal());
@@ -630,30 +621,19 @@ class NewsModalHandler {
 
         // Close modal on Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.modal.classList.contains('active')) {
+            if (e.key === 'Escape' && this.modal && this.modal.classList.contains('active')) {
                 this.closeModal();
             }
         });
-    }
-
-    openModal(noticiaId) {
-        const noticia = noticiasData[noticiaId];
-        if (!noticia) return;
-
-        this.modalTitle.textContent = noticia.titulo;
-        this.modalImage.src = noticia.imagem;
-        this.modalImage.alt = noticia.titulo;
-        this.modalDate.textContent = noticia.data;
-        this.modalCategory.textContent = noticia.categoria;
-        this.modalContent.innerHTML = noticia.conteudo;
-
-        this.modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        
+        // We no longer need the static news card click listeners as we handle this in the dynamic JS
     }
 
     closeModal() {
-        this.modal.classList.remove('active');
-        document.body.style.overflow = 'unset';
+        if (this.modal) {
+            this.modal.classList.remove('active');
+            document.body.style.overflow = 'unset';
+        }
     }
 }
 
