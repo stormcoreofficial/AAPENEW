@@ -704,6 +704,66 @@ class EventsModalHandler {
     }
 }
 
+// Função para buscar notícias da API
+async function fetchNoticias() {
+    const apiUrl = "https://script.google.com/macros/s/AKfycby8U7VqPva3ymAQBLGJCWo0cp6thk9znVs5H2PEtaDFcv-Hedcswfrq7LcejRAQv7SS/exec";
+
+    try {
+        const response = await fetch(apiUrl);
+        const noticias = await response.json();
+
+        const noticiasContainer = document.querySelector('.noticias-carousel');
+        noticiasContainer.innerHTML = ''; // Limpa o conteúdo existente
+
+        noticias.forEach(noticia => {
+            if (noticia.Publicado) {
+                const noticiaCard = document.createElement('article');
+                noticiaCard.className = 'noticia-card';
+                noticiaCard.dataset.noticia = noticia.ID;
+
+                noticiaCard.innerHTML = `
+                    <div class="noticia-image">
+                        <img src="${noticia.imagem_url}" alt="${noticia.titulo}" />
+                        <span class="noticia-categoria">${noticia.subtitulo}</span>
+                    </div>
+                    <div class="noticia-content">
+                        <div class="noticia-date">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                <rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+                                <line x1="16" x2="16" y1="2" y2="6"></line>
+                                <line x1="8" x2="8" y1="2" y2="6"></line>
+                                <line x1="3" x2="21" y1="10" y2="10"></line>
+                            </svg>
+                            ${noticia.data}
+                        </div>
+                        <h3>${noticia.titulo}</h3>
+                        <p>${noticia.conteudo.substring(0, 100)}...</p>
+                        <button class="btn-link">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Ler mais
+                        </button>
+                    </div>
+                `;
+
+                noticiasContainer.appendChild(noticiaCard);
+            }
+        });
+
+        // Atualiza o modal de notícias
+        new NewsModalHandler();
+    } catch (error) {
+        console.error("Erro ao buscar notícias:", error);
+    }
+}
+
+// Chama a função ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    fetchNoticias();
+});
+
 // Initialize all handlers when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.newsletter-form');
