@@ -611,7 +611,7 @@ class NewsModalHandler {
         document.querySelectorAll('.noticia-card').forEach(card => {
             card.addEventListener('click', (e) => {
                 e.preventDefault();
-                const noticiaId = card.dataset.noticiaId; // Usar o ID correto
+                const noticiaId = parseInt(card.dataset.noticiaId, 10); // Garantir que o ID seja numérico
                 this.openModal(noticiaId);
             });
         });
@@ -638,8 +638,11 @@ class NewsModalHandler {
     }
 
     openModal(noticiaId) {
-        const noticia = this.noticias.find(n => n.ID === noticiaId); // Buscar a notícia correta pelo ID
-        if (!noticia) return;
+        const noticia = this.noticias.find(n => parseInt(n.ID, 10) === noticiaId); // Buscar a notícia correta pelo ID
+        if (!noticia) {
+            console.error(`Notícia com ID ${noticiaId} não encontrada.`);
+            return;
+        }
 
         // Formatar a data para dd/mm/aaaa
         const formattedDate = new Date(noticia.data).toLocaleDateString('pt-BR', {
@@ -680,7 +683,7 @@ async function fetchNoticias() {
             if (noticia.Publicado) {
                 const noticiaCard = document.createElement('article');
                 noticiaCard.className = 'noticia-card';
-                noticiaCard.dataset.noticiaId = noticia.ID; // Corrigir para usar o ID correto
+                noticiaCard.dataset.noticiaId = noticia.ID; // Usar o ID numérico diretamente
 
                 // Formatar a data para dd/mm/aaaa
                 const formattedDate = new Date(noticia.data).toLocaleDateString('pt-BR', {
