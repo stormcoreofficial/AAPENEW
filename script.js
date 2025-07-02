@@ -594,7 +594,8 @@ class AccessibilityControlsHandler {
 
 // News Modal Handler
 class NewsModalHandler {
-    constructor() {
+    constructor(noticias) {
+        this.noticias = noticias;
         this.modal = document.getElementById('noticiaModal');
         this.modalTitle = document.getElementById('modalTitle');
         this.modalImage = document.getElementById('modalImage');
@@ -610,7 +611,7 @@ class NewsModalHandler {
         document.querySelectorAll('.noticia-card').forEach(card => {
             card.addEventListener('click', (e) => {
                 e.preventDefault();
-                const noticiaId = card.dataset.noticia;
+                const noticiaId = card.dataset.noticiaId;
                 this.openModal(noticiaId);
             });
         });
@@ -637,63 +638,23 @@ class NewsModalHandler {
     }
 
     openModal(noticiaId) {
-        const noticia = noticiasData[noticiaId];
+        const noticia = this.noticias.find(n => n.ID === noticiaId);
         if (!noticia) return;
 
+        // Formatar a data para dd/mm/aaaa
+        const formattedDate = new Date(noticia.data).toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+
         this.modalTitle.textContent = noticia.titulo;
-        this.modalImage.src = noticia.imagem;
+        this.modalImage.src = noticia.imagem_url;
         this.modalImage.alt = noticia.titulo;
-        this.modalDate.textContent = noticia.data;
-        this.modalCategory.textContent = noticia.categoria;
+        this.modalDate.textContent = formattedDate;
+        this.modalCategory.textContent = noticia.subtitulo;
         this.modalContent.innerHTML = noticia.conteudo;
 
-        this.modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    closeModal() {
-        this.modal.classList.remove('active');
-        document.body.style.overflow = 'unset';
-    }
-}
-
-// Events Modal Handler
-class EventsModalHandler {
-    constructor() {
-        this.modal = document.getElementById('eventosModal');
-        this.modalClose = document.getElementById('eventosModalClose');
-        this.verMaisBtn = document.getElementById('verMaisEventos');
-        this.init();
-    }
-
-    init() {
-        // Open modal when clicking "Ver mais eventos"
-        if (this.verMaisBtn) {
-            this.verMaisBtn.addEventListener('click', () => this.openModal());
-        }
-
-        // Close modal listeners
-        if (this.modalClose) {
-            this.modalClose.addEventListener('click', () => this.closeModal());
-        }
-
-        if (this.modal) {
-            this.modal.addEventListener('click', (e) => {
-                if (e.target === this.modal) {
-                    this.closeModal();
-                }
-            });
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.modal.classList.contains('active')) {
-                this.closeModal();
-            }
-        });
-    }
-
-    openModal() {
         this.modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -719,7 +680,14 @@ async function fetchNoticias() {
             if (noticia.Publicado) {
                 const noticiaCard = document.createElement('article');
                 noticiaCard.className = 'noticia-card';
-                noticiaCard.dataset.noticia = noticia.ID;
+                noticiaCard.dataset.noticiaId = noticia.ID;
+
+                // Formatar a data para dd/mm/aaaa
+                const formattedDate = new Date(noticia.data).toLocaleDateString('pt-BR', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric'
+                });
 
                 noticiaCard.innerHTML = `
                     <div class="noticia-image">
@@ -734,7 +702,7 @@ async function fetchNoticias() {
                                 <line x1="8" x2="8" y1="2" y2="6"></line>
                                 <line x1="3" x2="21" y1="10" y2="10"></line>
                             </svg>
-                            ${noticia.data}
+                            ${formattedDate}
                         </div>
                         <h3>${noticia.titulo}</h3>
                         <p>${noticia.conteudo.substring(0, 100)}...</p>
@@ -753,7 +721,7 @@ async function fetchNoticias() {
         });
 
         // Atualiza o modal de notícias
-        new NewsModalHandler();
+        new NewsModalHandler(noticias);
     } catch (error) {
         console.error("Erro ao buscar notícias:", error);
     }
