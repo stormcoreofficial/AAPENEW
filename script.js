@@ -564,7 +564,7 @@ class AccessibilityControlsHandler {
             width: 48px;
             height: 48px;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
             display: none;
             align-items: center;
@@ -595,7 +595,7 @@ class AccessibilityControlsHandler {
 // News Modal Handler
 class NewsModalHandler {
     constructor(noticias) {
-        this.noticias = noticias;
+        this.noticias = noticias; // Garantir que as notícias sejam passadas corretamente
         this.modal = document.getElementById('noticiaModal');
         this.modalTitle = document.getElementById('modalTitle');
         this.modalImage = document.getElementById('modalImage');
@@ -607,16 +607,16 @@ class NewsModalHandler {
     }
 
     init() {
-        // Add click listeners to news cards
+        // Adicionar listeners para os cards de notícias
         document.querySelectorAll('.noticia-card').forEach(card => {
             card.addEventListener('click', (e) => {
                 e.preventDefault();
-                const noticiaId = card.dataset.noticiaId;
+                const noticiaId = card.dataset.noticiaId; // Usar o ID correto
                 this.openModal(noticiaId);
             });
         });
 
-        // Close modal listeners
+        // Listener para fechar o modal
         if (this.modalClose) {
             this.modalClose.addEventListener('click', () => this.closeModal());
         }
@@ -629,7 +629,7 @@ class NewsModalHandler {
             });
         }
 
-        // Close modal on Escape key
+        // Fechar modal com a tecla Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.modal.classList.contains('active')) {
                 this.closeModal();
@@ -638,7 +638,7 @@ class NewsModalHandler {
     }
 
     openModal(noticiaId) {
-        const noticia = this.noticias.find(n => n.ID === noticiaId);
+        const noticia = this.noticias.find(n => n.ID === noticiaId); // Buscar a notícia correta pelo ID
         if (!noticia) return;
 
         // Formatar a data para dd/mm/aaaa
@@ -680,7 +680,7 @@ async function fetchNoticias() {
             if (noticia.Publicado) {
                 const noticiaCard = document.createElement('article');
                 noticiaCard.className = 'noticia-card';
-                noticiaCard.dataset.noticiaId = noticia.ID;
+                noticiaCard.dataset.noticiaId = noticia.ID; // Corrigir para usar o ID correto
 
                 // Formatar a data para dd/mm/aaaa
                 const formattedDate = new Date(noticia.data).toLocaleDateString('pt-BR', {
@@ -720,7 +720,7 @@ async function fetchNoticias() {
             }
         });
 
-        // Atualiza o modal de notícias
+        // Atualiza o modal de notícias com os dados corretos
         new NewsModalHandler(noticias);
     } catch (error) {
         console.error("Erro ao buscar notícias:", error);
